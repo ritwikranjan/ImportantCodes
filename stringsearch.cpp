@@ -16,6 +16,7 @@ int main()
     for (int i = 0; i<=n; i++){
         if (key == s[i]){
             cout<<"found at "<<i;
+            break;
         }
         else if (i == n){
             cout<<"not found";

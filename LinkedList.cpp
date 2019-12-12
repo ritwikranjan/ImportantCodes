@@ -247,21 +247,30 @@ node* mergeSort(node*head)
 
 }
 
+class stack{
+public:
+	node * head;
+	stack(){
+		head = NULL;
+	}
+	void push(int d){
+		InsertAtHead(head,d);
+	}
+	void pop(){
+		deleteAtHead(head);
+	}
+	int top(){
+		return head->data;
+	}
+};
+
 int main()
 {
-	node*head = NULL;
-	int a,b,c,d;
-	cin>>head;
-	cin>>a;
-	InsertAtTail(head,a);
-	cout<<head<<endl;
-	cin>>b>>c;
-	InsertAtMiddle(head,b,c);
-	cout<<head<<endl;
-	deleteAtEnd(head);
-	cout<<head<<endl;
-	cin>>d;
-	deleteAtMiddle(head,d);
-	cout<<head<<endl;
+	stack s;
+	s.push(10);
+	s.push(20);
+	cout<<s.top()<<endl;
+	s.pop();
+	cout<<s.top();
 	return 0;
 }
